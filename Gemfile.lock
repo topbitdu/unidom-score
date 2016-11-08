@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    unidom-accession (2.2.1)
-      unidom-common (>= 1.6)
+    unidom-score (0.1)
+      unidom-common (>= 1.7)
 
 GEM
   remote: https://rubygems.org/
@@ -119,7 +119,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  unidom-accession!
+  unidom-score!
 
 BUNDLED WITH
    1.12.5
