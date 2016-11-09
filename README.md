@@ -36,5 +36,7 @@ The migration versions start with 200601.
 ## Call the Model
 
 ```ruby
-score_sheet = Unidom::Score::ScoreSheet.valid_at.alive.first
+scorer       = Unidom::Party::Person.create! name: 'Tim'
+score_keeper = Unidom::Party::Shop.create!   name: 'WalMart'
+score_sheet  = Unidom::Score::ScoreSheet.score! scorer: scorer, score_keeper: score_keeper, template: nil, name: nil, score: 98, scored_on: Date.current, opened_at: Time.now, description: nil, instruction: nil
 ```
