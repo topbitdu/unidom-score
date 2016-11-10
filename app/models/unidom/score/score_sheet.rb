@@ -1,5 +1,5 @@
 # Score Sheet 是评分表。
-# #score_sheet_template 是评分表模版。
+# #template 是评分表模版。
 # #scorer 是评分者。
 # #score_keeper 是得分者。
 
