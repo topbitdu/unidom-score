@@ -26,9 +26,9 @@ class CreateUnidomScoreItems < ActiveRecord::Migration
 
     end
 
-    add_index :unidom_score_sheets, :score_sheet_id
-    add_index :unidom_score_sheets, :score_item_template_id
-    add_index :unidom_score_sheets, :scorer_id
+    add_index :unidom_score_items, :score_sheet_id
+    add_index :unidom_score_items, :score_item_template_id
+    add_index :unidom_score_items, :scorer_id
 
   end
 
