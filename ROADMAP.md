@@ -7,3 +7,7 @@
 1. Score Item model & migration
 2. Improve the Score Sheet model to add the association to the Score Item
 3. Improve the Score Sheet model to add the :template_is scope, the :scored_by scope, & the :score_kept_by scope
+
+## v0.3
+1. Score Sheet Template model & migration
+2. Improve the Score Sheet model to add the association to the Score Sheet Template
