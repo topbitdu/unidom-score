@@ -16,6 +16,12 @@ class Unidom::Score::ScoreSheet < Unidom::Score::ApplicationRecord
   belongs_to :scorer,       polymorphic: true
   belongs_to :score_keeper, polymorphic: true
 
+  has_many :score_items, class_name: 'Unidom::Score::ScoreItem'
+
+  scope :template_is,   ->(template)     { where template_id:  to_id(template) }
+  scope :scored_by,     ->(scorer)       { where scorer:       scorer          }
+  scope :score_kept_by, ->(score_keeper) { where score_keeper: score_keeper    }
+
   def self.score!(scorer: nil, score_keeper: nil, template: nil, name: template.try(:name), score: 0, scored_on: Date.current, opened_at: Time.now, description: nil, instruction: nil)
     create! scorer: scorer, score_keeper: score_keeper, template: template, name: name, score: score, scored_on: scored_on, opened_at: opened_at, description: description, instruction: instruction
   end
