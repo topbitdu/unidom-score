@@ -16,7 +16,7 @@ class Unidom::Score::ScoreSheet < Unidom::Score::ApplicationRecord
   belongs_to :scorer,       polymorphic: true
   belongs_to :score_keeper, polymorphic: true
 
-  has_many :score_items, class_name: 'Unidom::Score::ScoreItem'
+  has_many :items, class_name: 'Unidom::Score::ScoreItem'
 
   scope :template_is,   ->(template)     { where template_id:  to_id(template) }
   scope :scored_by,     ->(scorer)       { where scorer:       scorer          }
