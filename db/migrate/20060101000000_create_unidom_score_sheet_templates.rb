@@ -23,7 +23,7 @@ class CreateUnidomScoreSheetTemplates < ActiveRecord::Migration
 
     end
 
-    add_index :unidom_score_sheets, :subject_id
+    add_index :unidom_score_sheet_templates, :subject_id
 
   end
 
