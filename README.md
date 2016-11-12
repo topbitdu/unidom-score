@@ -36,7 +36,14 @@ The migration versions start with 200601.
 ## Call the Model
 
 ```ruby
+company  = Unidom::Party::Company.create! name: 'Xerox'
+template = Unidom::Score::ScoreSheetTemplate.create! subject: company, name: 'Survey 2003', total_score: 100
+
 scorer       = Unidom::Party::Person.create! name: 'Tim'
 score_keeper = Unidom::Party::Shop.create!   name: 'WalMart'
-score_sheet  = Unidom::Score::ScoreSheet.score! scorer: scorer, score_keeper: score_keeper, template: nil, name: nil, score: 98, scored_on: Date.current, opened_at: Time.now, description: nil, instruction: nil
+score_sheet  = Unidom::Score::ScoreSheet.score! scorer: scorer, score_keeper: score_keeper, template: template, name: nil, score: 98, scored_on: Date.current, opened_at: Time.now, description: nil, instruction: nil
+# The template could be nil
+
+item_1 = Unidom::Score::ScoreItem.score! sheet: score_sheet, scorer: score_sheet.try(:scorer), template: nil, title: template.try(:title), score: 59, scored_on: Date.current, opened_at: Time.now, description: nil, instruction: nil
+item_2 = Unidom::Score::ScoreItem.score! sheet: score_sheet, scorer: score_sheet.try(:scorer), template: nil, title: template.try(:title), score: 39, scored_on: Date.current, opened_at: Time.now, description: nil, instruction: nil
 ```
