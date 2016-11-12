@@ -20,8 +20,8 @@ class Unidom::Score::ScoreItem < Unidom::Score::ApplicationRecord
   scope :template_is, ->(template) { where template_id: to_id(template) }
   scope :scored_by,   ->(scorer)   { where scorer:      scorer          }
 
-  def self.score!(sheet: nil, scorer: nil, template: nil, name: template.try(:name), score: 0, scored_on: Date.current, opened_at: Time.now, description: nil, instruction: nil)
-    create! sheet: sheet, scorer: scorer, template: template, name: name, score: score, scored_on: scored_on, opened_at: opened_at, description: description, instruction: instruction
+  def self.score!(sheet: nil, scorer: sheet.try(:scorer), template: nil, title: template.try(:title), score: 0, scored_on: Date.current, opened_at: Time.now, description: nil, instruction: nil)
+    create! sheet: sheet, scorer: scorer, template: template, title: title, score: score, scored_on: scored_on, opened_at: opened_at, description: description, instruction: instruction
   end
 
 end
