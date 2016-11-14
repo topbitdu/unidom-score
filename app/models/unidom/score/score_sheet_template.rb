@@ -1,7 +1,7 @@
 # Score Sheet Tempalte 是评分表模版。
-# #template 是评分表模版。
-# #scorer 是评分者。
-# #score_keeper 是得分者。
+# #subject 是主题。
+# #items 是评分项模版。
+# #scorings 是评分表。
 
 class Unidom::Score::ScoreSheetTemplate < Unidom::Score::ApplicationRecord
 
@@ -14,7 +14,8 @@ class Unidom::Score::ScoreSheetTemplate < Unidom::Score::ApplicationRecord
 
   belongs_to :subject, polymorphic: true
 
-  has_many :sheets, class_name: 'Unidom::Score::ScoreSheet'
+  has_many :items,    class_name: 'Unidom::Score::ScoreItemTemplate', foreign_key: :sheet_id
+  has_many :scorings, class_name: 'Unidom::Score::ScoreSheet',        foreign_key: :template_id
 
   scope :subject_is, ->(subject) { where subject: subject }
 
