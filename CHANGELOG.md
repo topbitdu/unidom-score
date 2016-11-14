@@ -11,3 +11,8 @@
 ## v0.3
 1. Score Sheet Template model & migration
 2. Improve the Score Sheet model to add the association to the Score Sheet Template
+
+## v0.4
+1. Score Item Template model & migration
+2. Improve the Score Item model to add the association to the Score Item Template model
+3. Improve the Score Sheet Template model to add the association to the Score Item Template model
