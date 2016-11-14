@@ -4,10 +4,10 @@ class CreateUnidomScoreSheets < ActiveRecord::Migration
 
     create_table :unidom_score_sheets, id: :uuid do |t|
 
-      t.references :score_sheet_template, type: :uuid, null: true
-      t.references :scorer,               type: :uuid, null: false,
+      t.references :template,     type: :uuid, null: true
+      t.references :scorer,       type: :uuid, null: false,
         polymorphic: { null: false, default: '', limit: 200 }
-      t.references :score_keeper,         type: :uuid, null: false,
+      t.references :score_keeper, type: :uuid, null: false,
         polymorphic: { null: false, default: '', limit: 200 }
 
       t.string  :name,      null: true,  default: nil, limit:     200
@@ -27,7 +27,7 @@ class CreateUnidomScoreSheets < ActiveRecord::Migration
 
     end
 
-    add_index :unidom_score_sheets, :score_sheet_template_id
+    add_index :unidom_score_sheets, :template_id
     add_index :unidom_score_sheets, :scorer_id
     add_index :unidom_score_sheets, :score_keeper_id
 
