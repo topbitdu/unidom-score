@@ -1,7 +1,7 @@
 # Score Item 是评分项。
+# #sheet 是评分表。
 # #template 是评分项模版。
 # #scorer 是评分者。
-# #score_keeper 是得分者。
 
 class Unidom::Score::ScoreItem < Unidom::Score::ApplicationRecord
 
@@ -12,11 +12,11 @@ class Unidom::Score::ScoreItem < Unidom::Score::ApplicationRecord
   validates :title, allow_blank: true, length: { in: 2..columns_hash['title'].limit }
   validates :score, presence:    true, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 1_000_000_000 }
 
-  belongs_to :sheet,    class_name:  'Unidom::Score::ScoreSheet',        foreign_key: :score_sheet_id
-  belongs_to :template, class_name:  'Unidom::Score::ScoreItemTemplate', foreign_key: :score_item_template_id
+  belongs_to :sheet,    class_name:  'Unidom::Score::ScoreSheet',        foreign_key: :sheet_id
+  belongs_to :template, class_name:  'Unidom::Score::ScoreItemTemplate', foreign_key: :template_id
   belongs_to :scorer,   polymorphic: true
 
-  scope :sheet_is,    ->(sheet)    { where sheet:       sheet           }
+  scope :sheet_is,    ->(sheet)    { where sheet_id:    to_id(sheet)    }
   scope :template_is, ->(template) { where template_id: to_id(template) }
   scope :scored_by,   ->(scorer)   { where scorer:      scorer          }
 
