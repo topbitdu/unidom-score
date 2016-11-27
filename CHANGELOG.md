@@ -1,7 +1,7 @@
 # Unidom Score Change Log 评分领域模型引擎变更日志
 
 ## v0.1
-1. Score Sheet model & migration
+1. Score Sheet model & migration (20060111000000)
 
 ## v0.2
 1. Score Item model & migration
