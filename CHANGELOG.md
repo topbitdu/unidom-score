@@ -4,7 +4,7 @@
 1. Score Sheet model & migration (20060111000000)
 
 ## v0.2
-1. Score Item model & migration
+1. Score Item model & migration (20060112000000)
 2. Improved the Score Sheet model to add the association to the Score Item
 3. Improved the Score Sheet model to add the :template_is scope, the :scored_by scope, & the :score_kept_by scope
 
