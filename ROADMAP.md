@@ -5,7 +5,7 @@
 
 ## v0.2
 1. Score Item model & migration (20060112000000)
-2. Improve the Score Sheet model to add the association to the Score Item
+2. Improve the Score Sheet model to add the ``has_many :items, class_name: 'Unidom::Score::ScoreItem', foreign_key: :sheet_id`` macro
 3. Improve the Score Sheet model to add the :template_is scope, the :scored_by scope, & the :score_kept_by scope
 
 ## v0.3
