@@ -7,8 +7,8 @@ class CreateUnidomScoreSheetTemplates < ActiveRecord::Migration
       t.references :subject, type: :uuid, null: false,
         polymorphic: { null: false, default: '', limit: 200 }
 
-      t.string  :name,        null: true,  default: nil, limit:     200
-      t.decimal :total_score, null: false, default: 0.0, precision: 12, scale: 2
+      t.string  :name,  null: true,  default: nil, limit:     200
+      t.decimal :score, null: false, default: 0.0, precision: 12, scale: 2
 
       t.text :description
       t.text :instruction
