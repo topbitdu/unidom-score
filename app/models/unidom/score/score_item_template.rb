@@ -9,7 +9,7 @@ class Unidom::Score::ScoreItemTemplate < Unidom::Score::ApplicationRecord
   include Unidom::Common::Concerns::ModelExtension
 
   validates :title, presence: true, length: { in: 2..columns_hash['title'].limit }
-  validates :score, presence: true, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 1_000_000_000 }
+  validates :score, presence: true, numericality: { greater_than_or_equal_to: -1_000_000_000, less_than_or_equal_to: 1_000_000_000 }
 
   belongs_to :sheet, class_name: 'Unidom::Score::ScoreSheetTemplate'
 
