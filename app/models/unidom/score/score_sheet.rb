@@ -11,7 +11,7 @@ class Unidom::Score::ScoreSheet < Unidom::Score::ApplicationRecord
   include Unidom::Common::Concerns::ModelExtension
 
   validates :name,  allow_blank: true, length: { in: 2..columns_hash['name'].limit }
-  validates :score, presence:    true, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 1_000_000_000 }
+  validates :score, presence:    true, numericality: { greater_than_or_equal_to: -1_000_000_000, less_than_or_equal_to: 1_000_000_000 }
 
   belongs_to :template,     class_name:  'Unidom::Score::ScoreSheetTemplate', foreign_key: :template_id
   belongs_to :scorer,       polymorphic: true
