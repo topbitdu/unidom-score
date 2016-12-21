@@ -37,7 +37,7 @@ The migration versions start with 200601.
 
 ```ruby
 company  = Unidom::Party::Company.create! name: 'Xerox'
-sheet_template = Unidom::Score::ScoreSheetTemplate.create! subject: company, name: 'Survey 2003', total_score: 100
+sheet_template = Unidom::Score::ScoreSheetTemplate.create! subject: company, name: 'Survey 2003', score: 100
 
 item_template_1 = Unidom::Score::ScoreItemTemplate.create! sheet: sheet_template, title: 'Q1: What is your name?', score: 60
 item_template_2 = Unidom::Score::ScoreItemTemplate.create! sheet: sheet_template, title: 'Q2: How old are you?', score: 40
