@@ -21,7 +21,7 @@
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.7.1
 
 ## v1.0
-1. Improve the Score Sheet Template model & migration to rename the #total_score attribute to the #score attribute
+1. Improve the Score Sheet Template model & migration to rename the #``total_score`` attribute to the #score attribute
 2. Improve the Score Sheet Template model for the validation of the #total_score attribute could be negative
 3. Improve the Score Item Template model for the validation of the #score attribute could be negative
 4. Improve the Score Sheet model for the validation of the #score attribute could be negative
