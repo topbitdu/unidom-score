@@ -15,7 +15,7 @@
 ## v0.4
 1. Score Item Template model & migration (20060102000000)
 2. Improved the Score Item model to add the association to the Score Item Template model
-3. Improve the Score Sheet Template model to add the association to the Score Item Template model
+3. Improved the Score Sheet Template model to add the association to the Score Item Template model
 
 ## v0.4.1
 1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.7.1
