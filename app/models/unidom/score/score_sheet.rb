@@ -1,3 +1,4 @@
+##
 # Score Sheet 是评分表。
 # #template 是评分表模版。
 # #scorer 是评分者。
