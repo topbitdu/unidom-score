@@ -22,7 +22,7 @@
 
 ## v1.0
 1. Improve the Score Sheet Template model & migration to rename the #``total_score`` attribute to the #``score`` attribute
-2. Improve the Score Sheet Template model for the validation of the #total_score attribute could be negative
+2. Improve the Score Sheet Template model for the validation of the #``score`` attribute could be negative
 3. Improve the Score Item Template model for the validation of the #score attribute could be negative
 4. Improve the Score Sheet model for the validation of the #score attribute could be negative
 5. Improve the Score Item model for the validation of the #score attribute could be negative
