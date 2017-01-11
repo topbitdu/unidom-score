@@ -1,6 +1,8 @@
 # Unidom Score 评分领域模型引擎
 
+[![Documentation](http://img.shields.io/badge/docs-rdoc.info-blue.svg)](http://www.rubydoc.info/gems/unidom-score/frames)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](http://opensource.org/licenses/MIT)
+
 [![Gem Version](https://badge.fury.io/rb/unidom-score.svg)](https://badge.fury.io/rb/unidom-score)
 [![Dependency Status](https://gemnasium.com/badges/github.com/topbitdu/unidom-score.svg)](https://gemnasium.com/github.com/topbitdu/unidom-score)
 
