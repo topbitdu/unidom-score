@@ -30,4 +30,4 @@ class Unidom::Score::ScoreItem < Unidom::Score::ApplicationRecord
     create! sheet: sheet, scorer: scorer, template: template, title: title, score: score, scored_on: scored_on, opened_at: opened_at, description: description, instruction: instruction
   end
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Score::ScoreItem'
