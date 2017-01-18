@@ -18,4 +18,4 @@ class Unidom::Score::ScoreItemTemplate < Unidom::Score::ApplicationRecord
 
   scope :sheet_is, ->(sheet) { where sheet_id: to_id(sheet) }
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Score::ScoreItemTemplate'
