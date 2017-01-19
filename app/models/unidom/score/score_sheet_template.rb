@@ -20,4 +20,4 @@ class Unidom::Score::ScoreSheetTemplate < Unidom::Score::ApplicationRecord
 
   scope :subject_is, ->(subject) { where subject: subject }
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Score::ScoreSheetTemplate'
