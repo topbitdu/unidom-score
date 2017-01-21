@@ -33,4 +33,4 @@ class Unidom::Score::ScoreSheet < Unidom::Score::ApplicationRecord
     create! scorer: scorer, score_keeper: score_keeper, template: template, name: name, score: score, scored_on: scored_on, opened_at: opened_at, description: description, instruction: instruction
   end
 
-end
+end unless Unidom::Common::Neglection.namespace_neglected? 'Unidom::Score::ScoreSheet'
