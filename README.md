@@ -53,3 +53,19 @@ item_1 = Unidom::Score::ScoreItem.score! sheet: score_sheet, scorer: score_sheet
 item_2 = Unidom::Score::ScoreItem.score! sheet: score_sheet, scorer: score_sheet.try(:scorer), template: item_template_2, title: item_template_2.try(:title), score: 39, scored_on: Date.current, opened_at: Time.now, description: nil, instruction: nil
 # The template could be nil
 ```
+
+
+
+## Disable the Model & Migration
+
+If you only need the app components other than models, the migrations should be neglected, and the models should not be loaded.
+```ruby
+# config/initializers/unidom.rb
+Unidom::Common.configure do |options|
+
+  options[:neglected_namespaces] = %w{
+    Unidom::Score
+  }
+
+end
+```
