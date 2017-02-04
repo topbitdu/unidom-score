@@ -69,3 +69,18 @@ Unidom::Common.configure do |options|
 
 end
 ```
+
+
+
+## RSpec examples
+
+```ruby
+# spec/models/unidom_spec.rb
+require 'unidom/score/models_rspec'
+
+# spec/types/unidom_spec.rb
+require 'unidom/score/types_rspec'
+
+# spec/validators/unidom_spec.rb
+require 'unidom/score/validators_rspec'
+```
