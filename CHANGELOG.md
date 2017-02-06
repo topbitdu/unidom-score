@@ -18,7 +18,7 @@
 3. Improved the Score Sheet Template model to add the association to the Score Item Template model
 
 ## v0.4.1
-1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.7.1
+1. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.7.1
 
 ## v1.0
 1. Improve the Score Sheet Template model & migration to rename the #``total_score`` attribute to the #``score`` attribute
