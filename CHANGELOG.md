@@ -28,7 +28,7 @@
 5. Improved the Score Item model for the validation of the #score attribute could be negative
 
 ## v1.0.1
-1. Improve the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.8
+1. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.8
 2. Improve the Engine class to include the Engine Extension
 
 ## v1.0.2
