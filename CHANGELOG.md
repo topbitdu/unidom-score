@@ -25,7 +25,7 @@
 2. Improved the Score Sheet Template model for the validation of the #``score`` attribute could be negative
 3. Improved the Score Item Template model for the validation of the #``score`` attribute could be negative
 4. Improved the Score Sheet model for the validation of the #``score`` attribute could be negative
-5. Improved the Score Item model for the validation of the #score attribute could be negative
+5. Improved the Score Item model for the validation of the #``score`` attribute could be negative
 
 ## v1.0.1
 1. Improved the Ruby Gem Specification to depend on [unidom-common](https://github.com/topbitdu/unidom-common) v1.8
