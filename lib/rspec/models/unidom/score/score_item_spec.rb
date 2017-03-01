@@ -18,7 +18,42 @@ describe Unidom::Score::ScoreItem, type: :model do
       scored_on:   Date.current
     }
 
+    title_max_length = described_class.columns_hash['title'].limit
+
     it_behaves_like 'Unidom::Common::Concerns::ModelExtension', model_attributes
+
+    it_behaves_like 'validates', model_attributes, :score,
+      {                            } => 0,
+      { score: nil                 } => 2,
+      { score: ''                  } => 2,
+      { score: '1'                 } => 0,
+      { score: 1                   } => 0,
+      { score: 'A'                 } => 1,
+      { score: '0.00'              } => 0,
+      { score: 0.00                } => 0,
+      { score: '-999_999_999.99'   } => 0,
+      { score: -999_999_999.99     } => 0,
+      { score: '-1_000_000_000'    } => 0,
+      { score: -1_000_000_000      } => 0,
+      { score: '-1_000_000_000.01' } => 1,
+      { score: -1_000_000_000.01   } => 1,
+      { score: '999_999_999.99'    } => 0,
+      { score: 999_999_999.99      } => 0,
+      { score: '1_000_000_000'     } => 0,
+      { score: 1_000_000_000       } => 0,
+      { score: '1_000_000_000.01'  } => 1,
+      { score: 1_000_000_000.01    } => 1
+
+    it_behaves_like 'validates', model_attributes, :title,
+      {              } => 0,
+      { title: nil   } => 0,
+      { title: ''    } => 0,
+      { title: 'A'   } => 1,
+      { title: 'AA'  } => 0,
+      { title: 'AAA' } => 0,
+      { title: 'A'*(title_max_length-1) } => 0,
+      { title: 'A'*title_max_length     } => 0,
+      { title: 'A'*(title_max_length+1) } => 1
 
   end
 
