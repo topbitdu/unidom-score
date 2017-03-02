@@ -41,5 +41,5 @@
 3. Validators RSpec examples manifest
 
 ## v1.1.1
-1. Improve the Score Sheet model for the validations on the #name attribute, & the #score attribute
-2. Improve the Score Item model for the validations on the #title attribute, & the #score attribute
+1. Improve the Score Sheet spec for the validations on the #name attribute, & the #score attribute
+2. Improve the Score Item spec for the validations on the #title attribute, & the #score attribute
