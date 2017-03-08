@@ -55,6 +55,19 @@ describe Unidom::Score::ScoreItem, type: :model do
       { title: 'A'*title_max_length     } => 0,
       { title: 'A'*(title_max_length+1) } => 1
 
+    score_sheet_attributes = {
+      template_id:        SecureRandom.uuid,
+      scorer_id:          SecureRandom.uuid,
+      scorer_type:        'Unidom::Score::Scorer::Mock',
+      score_keeper_id:    SecureRandom.uuid,
+      score_keeper_type:  'Unidom::Score::ScoreKeeper::Mock',
+      name:               'Some Name',
+      score:              95.00,
+      scored_on:          Date.current
+    }
+
+    it_behaves_like 'belongs_to', model_attributes, :sheet, Unidom::Score::ScoreSheet, score_sheet_attributes
+
   end
 
 end
