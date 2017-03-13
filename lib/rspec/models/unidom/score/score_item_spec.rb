@@ -68,6 +68,14 @@ describe Unidom::Score::ScoreItem, type: :model do
 
     it_behaves_like 'belongs_to', model_attributes, :sheet, Unidom::Score::ScoreSheet, score_sheet_attributes
 
+    score_item_template_attributes = {
+      sheet_id: SecureRandom.uuid,
+      title:    'Some Title',
+      score:    100.00
+    }
+
+    it_behaves_like 'belongs_to', model_attributes, :template, Unidom::Score::ScoreItemTemplate, score_item_template_attributes
+
   end
 
 end
