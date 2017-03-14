@@ -56,6 +56,15 @@ describe Unidom::Score::ScoreSheet, type: :model do
       { name: 'A'*name_max_length     } => 0,
       { name: 'A'*(name_max_length+1) } => 1
 
+    score_sheet_template_attributes = {
+      subject_id:   SecureRandom.uuid,
+      subject_type: 'Unidom::Score::Subject::Mock',
+      name:         'Some Name',
+      score:        100.00
+    }
+
+    it_behaves_like 'belongs_to', model_attributes, :template, Unidom::Score::ScoreSheetTemplate, score_sheet_template_attributes
+
   end
 
 end
