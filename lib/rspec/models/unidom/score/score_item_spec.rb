@@ -18,9 +18,10 @@ describe Unidom::Score::ScoreItem, type: :model do
       scored_on:   Date.current
     }
 
-    title_max_length = described_class.columns_hash['title'].limit
-
     it_behaves_like 'Unidom::Common::Concerns::ModelExtension', model_attributes
+
+    it_behaves_like 'validates text', model_attributes, :title,
+      length: 2..described_class.columns_hash['title'].limit, allow_blank: true
 
     it_behaves_like 'validates', model_attributes, :score,
       {                            } => 0,
@@ -43,17 +44,6 @@ describe Unidom::Score::ScoreItem, type: :model do
       { score: 1_000_000_000       } => 0,
       { score: '1_000_000_000.01'  } => 1,
       { score: 1_000_000_000.01    } => 1
-
-    it_behaves_like 'validates', model_attributes, :title,
-      {              } => 0,
-      { title: nil   } => 0,
-      { title: ''    } => 0,
-      { title: 'A'   } => 1,
-      { title: 'AA'  } => 0,
-      { title: 'AAA' } => 0,
-      { title: 'A'*(title_max_length-1) } => 0,
-      { title: 'A'*title_max_length     } => 0,
-      { title: 'A'*(title_max_length+1) } => 1
 
     score_sheet_attributes = {
       template_id:        SecureRandom.uuid,
