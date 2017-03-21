@@ -16,6 +16,9 @@ describe Unidom::Score::ScoreItemTemplate, type: :model do
 
     it_behaves_like 'Unidom::Common::Concerns::ModelExtension', model_attributes
 
+    it_behaves_like 'validates text', model_attributes, :title,
+      length: 2..described_class.columns_hash['title'].limit
+
     score_sheet_template_attributes = {
       subject_id:    SecureRandom.uuid,
       subject_type:  'Unidom::Score::Subject::Mock',
