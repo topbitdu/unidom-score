@@ -55,3 +55,7 @@
 ## v1.1.4
 1. Improve the Score Item spec for the validations on the #title attribute
 2. Improve the Score Item Template spec for the validations on the #title attribute
+
+## v1.1.5
+1. Improve the Score Sheet spec for the validations on the #name attribute, & the #score attribute
+2. Improve the Score Sheet Template spec for the validations on the #name attribute, & the #score attribute
