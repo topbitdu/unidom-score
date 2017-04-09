@@ -46,7 +46,7 @@
 
 ## v1.1.2
 1. Improved the Score Item Template spec for the ``belongs_to :sheet, class_name: 'Unidom::Score::ScoreSheetTemplate'`` macro
-2. Improve the Score Item spec for the ``belongs_to :sheet, class_name: 'Unidom::Score::ScoreSheet', foreign_key: :sheet_id`` macro
+2. Improved the Score Item spec for the ``belongs_to :sheet, class_name: 'Unidom::Score::ScoreSheet', foreign_key: :sheet_id`` macro
 
 ## v1.1.3
 1. Improve the Score Item spec for the ``belongs_to :template, class_name: 'Unidom::Score::ScoreItemTemplate', foreign_key: :template_id`` macro
