@@ -23,27 +23,8 @@ describe Unidom::Score::ScoreItem, type: :model do
     it_behaves_like 'validates text', model_attributes, :title,
       length: 2..described_class.columns_hash['title'].limit, allow_blank: true
 
-    it_behaves_like 'validates', model_attributes, :score,
-      {                            } => 0,
-      { score: nil                 } => 2,
-      { score: ''                  } => 2,
-      { score: '1'                 } => 0,
-      { score: 1                   } => 0,
-      { score: 'A'                 } => 1,
-      { score: '0.00'              } => 0,
-      { score: 0.00                } => 0,
-      { score: '-999_999_999.99'   } => 0,
-      { score: -999_999_999.99     } => 0,
-      { score: '-1_000_000_000'    } => 0,
-      { score: -1_000_000_000      } => 0,
-      { score: '-1_000_000_000.01' } => 1,
-      { score: -1_000_000_000.01   } => 1,
-      { score: '999_999_999.99'    } => 0,
-      { score: 999_999_999.99      } => 0,
-      { score: '1_000_000_000'     } => 0,
-      { score: 1_000_000_000       } => 0,
-      { score: '1_000_000_000.01'  } => 1,
-      { score: 1_000_000_000.01    } => 1
+    it_behaves_like 'validates numericality', model_attributes, :score,
+      range: -1_000_000_000..1_000_000_000, minimum_inclusive: true, maximum_inclusive: true
 
     score_sheet_attributes = {
       template_id:        SecureRandom.uuid,
