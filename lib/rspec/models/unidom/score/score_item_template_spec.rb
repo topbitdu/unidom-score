@@ -19,6 +19,9 @@ describe Unidom::Score::ScoreItemTemplate, type: :model do
     it_behaves_like 'validates text', model_attributes, :title,
       length: 2..described_class.columns_hash['title'].limit
 
+    it_behaves_like 'validates numericality', model_attributes, :score,
+      range: -1_000_000_000..1_000_000_000, minimum_inclusive: true, maximum_inclusive: true
+
     score_sheet_template_attributes = {
       subject_id:    SecureRandom.uuid,
       subject_type:  'Unidom::Score::Subject::Mock',
