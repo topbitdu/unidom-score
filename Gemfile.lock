@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    unidom-score (1.1.5)
+    unidom-score (1.1.6)
       unidom-common (~> 1.9)
 
 GEM
