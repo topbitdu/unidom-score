@@ -47,6 +47,8 @@ describe Unidom::Score::ScoreItem, type: :model do
 
     it_behaves_like 'belongs_to', model_attributes, :template, Unidom::Score::ScoreItemTemplate, score_item_template_attributes
 
+    it_behaves_like 'monomorphic scope', model_attributes, :sheet_is, :sheet
+
   end
 
 end
