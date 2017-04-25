@@ -53,7 +53,7 @@
 2. Improved the Score Sheet spec for the ``belongs_to :template, class_name: 'Unidom::Score::ScoreSheetTemplate', foreign_key: :template_id`` macro
 
 ## v1.1.4
-1. Improve the Score Item spec for the validations on the #title attribute
+1. Improved the Score Item spec for the validations on the #title attribute
 2. Improve the Score Item Template spec for the validations on the #title attribute
 
 ## v1.1.5
