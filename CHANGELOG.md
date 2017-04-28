@@ -58,7 +58,7 @@
 
 ## v1.1.5
 1. Improved the Score Sheet spec for the validations on the #name attribute, & the #score attribute
-2. Improve the Score Sheet Template spec for the validations on the #name attribute, & the #score attribute
+2. Improved the Score Sheet Template spec for the validations on the #name attribute, & the #score attribute
 
 ## v1.1.6
 1. Improve the Score Item spec for the validations on the #score attribute
