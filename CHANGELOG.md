@@ -65,5 +65,5 @@
 2. Improved the Score Item Template spec for the validations on the #score attribute
 
 ## v1.1.7
-1. Improve the Score Item spec for the sheet_is scope
+1. Improved the Score Item spec for the sheet_is scope
 2. Improve the Score Item Template spec for the sheet_is scope
