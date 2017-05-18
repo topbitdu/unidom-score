@@ -67,3 +67,7 @@
 ## v1.1.7
 1. Improved the Score Item spec for the sheet_is scope
 2. Improved the Score Item Template spec for the sheet_is scope
+
+## v1.1.8
+1. Improve the Ruby Gem Specification to depend on unidom-common v1.10
+2. Improve the Score Sheet Template migration, the Score Item Template migration, the Score Sheet migration, & the Score Item migration for the #opened_at column, & the #closed_at column
